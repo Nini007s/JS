@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="date.css">
+</head>
+<body>
+    <div class="bg-img"></div>
+    <div class="cleader"></div>
+    <p id="year"></p>
+    <p id="monthName"></p>
+    <p id="day"></p>
+    <p id="dayName"></p>
+
+
+    <h2>範例一</h2>
+    <input type="button" value="訊息1" onclick="message()">
+    <!-- onclick=function名稱 -->
+    <input type="button" value="訊息2" id="btn2">
+    <input type="button" value="訊息3" id="btn3">
+    <input type="button" value="訊息4" id="btn4">
+    <input type="button" value="訊息5" id="btn5">
+    <br>
+    <p id="display"></p>
+
+    <br><br><br><br><br>
+    <h2>範例二:選擇背景顏色</h2>
+    <select name="" id="colors" onchange="change()">
+        <option value="transparent">無色</option>
+        <option value="lightblue">天空藍</option>
+        <option value="lightpink">幸福粉</option>
+        <option value="limegreen">檸檬綠</option>
+    </select>
+    <script>
+        // 第一種寫法-function分配法
+        function message(){
+            document.getElementById("display").innerHTML="第一種方法"
+             // 建立功能方法丟進物件裡
+        } 
+       
+
+
+        // 第二種寫法-物件分配法
+            document.getElementById("btn2").addEventListener("click",function(){
+            document.getElementById("display").innerHTML="第二種方法"
+            // 建立物件dom來執行click事件function功能{方法目的}
+            })
+           
+            
+        // 第三種方寫法-物件分配法 函式精簡版
+            document.getElementById("btn3").addEventListener("click",()=>{
+            document.getElementById("display").innerHTML="第三種方法"
+            // function改成=>
+            })
+        // 第四種寫法-物件分配法 更精簡版(dom關係鏈)
+            document.getElementById("btn4").onclick=()=>{
+            document.getElementById("display").innerHTML="第四種方法"
+            }
+        // 第五種寫法-變數精簡法
+            const btn5=document.getElementById("btn5");
+            const show=document.getElementById("display");
+            function showfunction(){
+                show.innerHTML="第五種方法"
+            }
+            btn5.addEventListener("click",showfunction);
+            
+
+            // 更改背景顏色
+            // 方法1:函式分配法
+            function change(){
+                var x=document.getElementById("colors").value;
+                document.body.style.background=x;
+            }
+            // 方法2:物件分配法
+
+    </script>
+</body>
+<!-- js連結 -->
+<script src="text.js">
+
+    
+
+</script>
+</html>

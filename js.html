@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js練習</title>
+
+    <!-- js連結內部 -->
+    <script lang="Javascript">
+        alert("跳出來就成功了")
+    </script>
+
+    <!-- js連結外部 -->
+    <script src="/NFT02/test.js" lang="Javascript"></script>
+</head>
+
+<body>
+    <h1>首頁</h1>
+    <h3><a href="./js-1.html">分頁2</a></h3>
+    <p id="no1"> </p>
+    <script>
+        document.getElementById("no1").innerHTML="DOM的練習";
+        // innerHTML去找html裡的元素/最後一定要加分號
+    </script>
+
+    <h3>變數</h3>
+    <p id="varible"></p>   
+    <script>
+        var s1="今年:";
+        // s1代號
+        var date= new Date();
+        var year=date.getFullYear();
+        var s2="年紀是";
+        var age=year-2002;
+
+        document.getElementById("varible").innerHTML=s1+year+"<br>"+s2+age;
+    </script>
+
+    <h3>打分數系統</h3>
+</body>
+</html>

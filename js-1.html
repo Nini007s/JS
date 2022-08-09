@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分頁2</title>
+    <link rel="stylesheet" href="car.css">
+    <!-- 打分數系統 -->
+    <script>
+        var n1 = prompt("請輸入分數:");
+        if (n1>=90)
+        alert("你超棒!")
+        // else if多建立一個條件
+        else if (n1<90 && n1>=80)
+        alert("還不錯喔!") 
+
+        else if (n1<80 && n1>=70)
+        alert("還可以!繼續加油") 
+
+        else  (n1<70 && n1>=60)
+        alert("請再加油!")
+        // 最後一個不用加if
+    </script>
+    
+</head>
+<body>
+    <h1 class="h1n1">二手車</h1>
+    <!-- onmouseover onmouseout練習 -->
+    <!-- 背景圖片 -->
+    <img  width="100%" height="100%" id="car" src="../imgs/car.jpg" >
+
+    <!-- 加入起作用的區域 -->
+    <div class="engine" onmouseover="show1()" onmouseout="noshow1()"></div>
+    <div class="wheel" onmouseover="show2()" onmouseout="noshow2()"></div>
+    <div class="seat"  onmouseover="show3()" onmouseout="noshow3()"></div>
+
+    <!-- 三張圖片 -->
+    <div id="img1">
+        <img src="../imgs/oldeng.png">
+        <h3 style="text-align: center;">壞掉的引擎</h3>
+    </div>
+    <div id="img2">
+        <img src="../imgs/wheel.png">
+        <h3 style="text-align: center;">二手破輪胎</h3>
+    </div>
+    <div id="img3">
+        <img src="../imgs/seat.png">
+        <h3 style="text-align: center;">30年老舊汽車座椅</h3>
+    </div>
+    <!-- JS程式 -->
+    <script>
+        // 一
+        function show1(){img1.style.display="block"}
+        function noshow1(){img1.style.display="none"}
+        // 二
+        function show2(){img2.style.display="block"}
+        function noshow2(){img2.style.display="none"} 
+        // 三
+        function show3(){img3.style.display="block"}
+        function noshow3(){img3.style.display="none"}
+    </script>
+
+
+
+
+    <h2>分頁二</h2>
+    <ol type="I" style="color: rgb(246, 61, 92);">
+        <li>打分數系統</li>
+        <li>事件處理器</li>
+        <li>溫度轉換器</li>
+        <li>鼠標覆蓋出現圖片</li>
+        <li></li>
+        <li></li>
+    </ol>
+    <h3><a href="./js.html">回首頁</a></h3>
+    -----------------------------------------
+
+   
+
+    <!-- Onclick事件處理器 -->
+    <h1>事件處理器</h1>
+    <button onclick="display()">顯示資訊</button>
+    <!-- onclick事件="執行程式"連結show id顯示h2     -->  
+    <button onclick="pink()">粉紅色</button>  
+        <button onclick="earse()">隱藏資訊</button>  
+    <p id="show">就這樣</p>  
+    <!-- 加上最後總結 -->
+    <script>
+        function display(){
+            document.getElementById('show').innerHTML='<h2>hellow</h2>'
+        }
+        function pink(){
+            document.getElementById('show').innerHTML='<h2 style=color:pink;>hellow</h2>'
+        }
+        function erase(){
+            document.getElementById('show').innerHTML=''
+        }
+    </script>
+
+    <!-- oninput溫度轉換器 -->
+    <h1>溫度轉換器</h1>
+    <label>請輸入攝氏</label>
+    <!-- 輸入-連結-計算-連結span id-顯示答案 -->
+    <input type="number" placeholder="攝氏" oninput="Converter(this.value)">
+    <!-- input表單 placeholder="攝氏" 框框裡的字 this.value輸入的值-->
+    <p>華氏是: <span id="output"></span></p>
+    <!-- 連結span的id顯示出答案 -->
+    <script lang="javascript">
+        function Converter(degree){
+            document.getElementById("output").innerHTML=((9/5)*degree)+32
+        }
+    </script>
+
+    <!-- onchange event下拉式選單 -->
+    <h1>下拉式選單</h1>
+    <select id="dropdown" onchange="select()">
+        <option value="">請選擇語言</option>
+        <option value="bee2">蜜蜂</option>
+        <!-- option選項 -->
+        <option value="tadpole">蝌蚪</option>
+        <option value="apple">蘋果</option>
+        <option value="Bootstrap">Bootstrap</option>
+
+    </select>
+
+    <h4 id="show1"></h4>
+    <img  id="image" width="200px" height="200px" src="" alt="圖片">
+    <!-- javascript -->
+    <script>
+        function select(){
+            var x=document.getElementById("dropdown").value;
+            // 變數名字叫x
+            document.getElementById("show1").innerHTML="您選擇的是"+x;
+            document.getElementById("image").src="../imgs/"+x+".png"
+            // value要與圖片檔名一樣
+        }
+    </script>
+  
+</body>
+</html>

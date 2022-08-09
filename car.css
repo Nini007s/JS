@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.h1n1{
+    text-align: center;
+}
+/* 區域1 */
+.engine{
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 70%;
+    left: 850px;
+}
+.engine:hover{
+    border: 5px solid rgb(70, 223, 240);
+    background-color: rgb(244, 248, 7);
+    opacity: 0.7;
+    transition: 1s;
+    /* transition淡出 */
+}
+/* 區域2 */
+.wheel{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 80%;
+    top: 500px;
+    left: 450px;
+}
+.wheel:hover{
+    border: 5px solid rgb(70, 223, 240);
+    background-color: rgb(244, 248, 7);
+    opacity: 0.7;
+    transition: 1s;
+}
+/* 區域3 */
+.seat{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 250px;
+    left: 300px;
+}
+.seat:hover{
+    border: 5px solid rgb(70, 223, 240);
+    background-color: rgb(244, 248, 7);
+    opacity: 0.7;
+    transition: 1s;
+}
+#img1{
+    position: absolute;
+    bottom: 200px;
+    left: 900px;
+    display: none;
+}
+#img1 img{
+    width: 330px;
+    height: 300px;
+}
+#img2{
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    display: none;
+}
+#img2 img{
+    width: 400px;
+    height: 400px;
+}
+#img3{
+    position: absolute;
+    bottom:200px;
+    left: 10px;
+    display: none;
+}
+#img3 img{
+    width: 330px;
+    height: 300px;
+}
